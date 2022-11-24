@@ -24,14 +24,9 @@ header {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-
-        /* overflow: hidden; */
+        justify-content: space-evenly;
 }
 
-nav{
-        margin-bottom: auto;
-}
 nav ul {
         display: flex;
         flex-direction: row;
@@ -69,6 +64,7 @@ nav ul li img{
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin: auto 0;
 }       
 
 .tag-line {
@@ -81,7 +77,6 @@ h2 {
         font-family: 'Inter', sans-serif;
         font-weight: 800;
         font-size: 3rem;
-
         color: #0B0A0A;
 }
 
@@ -119,7 +114,7 @@ h3 {
 
 #big-blob{
         position: absolute;
-        width: 30rem;
+        width: 30vw;
 
         top: -10vh;
         left: -12.5vw;
@@ -127,9 +122,9 @@ h3 {
 }
 #small-blob{
         position: absolute;
-        width: 7rem;
+        width: 7vw;
 
         top: 45vh;
-        left: -15rem;
+        left: -15vw;
         z-index: 100;
 }
