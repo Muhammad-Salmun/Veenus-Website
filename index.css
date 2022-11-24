@@ -22,9 +22,16 @@ body {
 
 header {
         height: 100vh;
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        /* overflow: hidden; */
 }
 
+nav{
+        margin-bottom: auto;
+}
 nav ul {
         display: flex;
         flex-direction: row;
@@ -44,7 +51,7 @@ nav ul li a {
         color: black;
         font-family: 'Imprima', sans-serif;
         font-style: normal;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
 
         margin-right: 6rem;
 }
@@ -55,7 +62,7 @@ nav ul li:first-child{
 }
 nav ul li img{             
         align-self: center;
-        width: auto;
+        width: 5rem;
 }
 
 .main {
@@ -73,7 +80,7 @@ nav ul li img{
 h2 {
         font-family: 'Inter', sans-serif;
         font-weight: 800;
-        font-size: 4rem;
+        font-size: 3rem;
 
         color: #0B0A0A;
 }
@@ -81,16 +88,16 @@ h2 {
 h3 {
         font-family: 'Imprima';
         font-weight: 400;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: rgba(11, 10, 10, 0.82);
 }
 
 .enquire-btn {
-        width: 15rem;
+        width: 12rem;
         aspect-ratio: 4/1;
         margin-right: 2rem;
         margin-top: 0.5rem;
-        padding: 0.8rem 0;
+        padding: 0.5rem 0;
         
         cursor: pointer;
 
@@ -98,39 +105,31 @@ h3 {
         border: 3px solid #000000;
         border-radius: 40px;
 
-        font-size: 2rem;
+        font-size: 1.5rem;
 }
 
 .clipart {
         flex: 3;
-        margin-right: var(--margin-right);
-        height: fit-content;
-        aspect-ratio: 1;
-        background-image: url("assets/images/building-construction-site-with-worker.png");
-        /* You must set a specified height */
-        background-position: center;
-        /* Center the image */
-        background-repeat: no-repeat;
-        /* Do not repeat the image */
-        background-size: contain;
-        /* Resize the background image to cover the entire container */
-
-        
+        margin-right: var(--margin-right);        
         position: relative;
 }
+.clipart-img{
+        width: 60vw;
+}
+
 #big-blob{
         position: absolute;
-        width: auto;
+        width: 30rem;
 
-        top: 7rem;
-        left: -12rem;
+        top: -10vh;
+        left: -12.5vw;
         z-index: -1;
 }
 #small-blob{
         position: absolute;
-        width: auto;
+        width: 7rem;
 
-        top: 43rem;
+        top: 45vh;
         left: -15rem;
         z-index: 100;
 }
