@@ -123,7 +123,7 @@ nav ul {
 .hero {
         display: flex;
         align-content: space-around;
-        padding-bottom: 15rem;
+        padding-bottom: 7rem;
 }
 
 .tag-line {
@@ -262,7 +262,7 @@ nav ul {
 
 
 .products-content .content-container h3 {
-        font-size: 3.125rem;
+        font-size: 3rem;
         font-weight: 800;
 }
 
@@ -272,7 +272,7 @@ nav ul {
 }
 
 .products-content .content-container .content {
-        font-weight: 200;
+        font-weight: 400;
         line-height: 150%;
 }
 
