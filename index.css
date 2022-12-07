@@ -14,9 +14,10 @@
 
 :root {
         --yellow: rgba(253, 190, 70, 1);
+        --dark-yellow: rgb(238, 156, 3);
         --light-yellow: rgba(254, 206, 115, 1);
         --grey: rgba(56, 56, 54, 1);
-
+        --light-grey: rgba(73, 81, 77, 1);
 
         --margin: 10rem;
 }
@@ -221,6 +222,7 @@ nav ul {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 3rem;
 }
 
 .products .heading-2 {
@@ -246,7 +248,6 @@ nav ul {
         background-size: cover;
 }
 
-.products-content .content-container,
 .products-content .corousel-container {
         display: flex;
         flex-direction: column;
@@ -372,4 +373,93 @@ nav ul {
 
 .next-card img {
         height: 25rem;
+}
+
+/* ----------------------------- testimonials ----------------------------- */
+
+.testimonials {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+}
+
+.testimonials .content-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+}
+
+.testimonials .title-container {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        background-image: url('assets/images/title-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 0px 0px 50px 0px;
+}
+
+.testimonials .title-container h3 {
+        font-family: 'Inter';
+        font-weight: 800;
+        font-size: 3rem;
+        line-height: 115%;
+        padding: 10rem 5rem;
+        text-transform: capitalize;
+}
+
+.testimonials .contents,
+.testimonials .person-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.testimonials .contents {
+        width: 30%;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2rem 0;
+}
+
+.testimonials .contents h4 {
+        font-weight: 600;
+        font-size: 2rem;
+
+        color: #49514D;
+        /* padding: 0 8rem; */
+}
+
+.testimonials .feedback, .testimonials .person-name, .testimonials .person-designation{
+        font-size: 1.3rem;
+        /* padding: 0 8rem; */
+}
+.testimonials .image-container{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 2rem;
+}
+.testimonials .image-container img{
+        border-radius: 50%;
+        width: 3.25rem;
+        aspect-ratio: 1;
+}
+.testimonials .image-container img:nth-child(2){        
+        width: 6.5rem;
+}
+
+.testimonials .person-designation{
+        color: var(--dark-yellow);
+}
+.testimonials .person-name{
+        color: var(--light-grey);
 }
