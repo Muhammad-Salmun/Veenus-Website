@@ -10,6 +10,11 @@
         list-style: none;
         box-shadow: none;
         border: none;
+
+}
+
+html {
+        scroll-behavior: smooth;
 }
 
 :root {
@@ -19,7 +24,7 @@
         --grey: rgba(56, 56, 54, 1);
         --light-grey: rgba(73, 81, 77, 1);
 
-        --margin: 10rem;
+        --margin: 10vw;
 }
 
 /* ----------------------------- common ----------------------------- */
@@ -35,7 +40,8 @@
 }
 
 .container {
-        margin: 0 var(--margin);
+        padding: 0 var(--margin) 0 var(--margin);
+        margin-bottom: 4rem;
         display: flex;
 }
 
@@ -76,6 +82,10 @@
         text-align: justify;
 }
 
+.card{        
+        display: flex;
+        flex-direction: column;
+}
 /* ----------------------------- body ----------------------------- */
 body {
         background-color: white;
@@ -89,7 +99,7 @@ body {
 
 /* ----------------------------- logo and nav bar ----------------------------- */
 header {
-        height: 100vh;
+        height: 90vh;
         flex-direction: column;
         justify-content: space-between;
 }
@@ -100,9 +110,19 @@ header {
 
 nav {
         display: flex;
-        padding: 2rem 0;
+        padding: 1rem 5rem;
         align-items: center;
         justify-content: space-between;
+        box-shadow: none;
+        background-color: white;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+
+        transition: all 500ms ease-in-out;
 }
 
 nav ul {
@@ -113,6 +133,7 @@ nav ul {
 }
 
 .nav-btn {
+        position: relative;
         color: #000;
         font-family: 'Roboto';
         font-weight: 400;
@@ -120,11 +141,29 @@ nav ul {
         line-height: 1.1em;
 }
 
+.nav-btn::after {
+        position: absolute;
+        bottom: -0.4rem;
+        left: 0;
+        width: 0%;
+        transform-origin: 50%;
+        transition: all 100ms ease-in;
+        content: "";
+        background-color: #FECE73;
+        border: 0px solid #FECE73;
+}
+
+.nav-btn.active .nav-btn::after,
+nav ul li:hover .nav-btn::after {
+        width: 80%;
+        border: 1px solid #FECE73;
+}
+
 /* ----------------------------- hero ----------------------------- */
 .hero {
         display: flex;
         align-content: space-around;
-        padding-bottom: 7rem;
+        padding-top: 40vh;
 }
 
 .tag-line {
@@ -224,7 +263,7 @@ nav ul {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 3rem;
+        margin: 1rem 0 3rem 0;
 }
 
 .products .heading-2 {
@@ -244,6 +283,7 @@ nav ul {
         position: relative;
         overflow: hidden;
 
+        background-color: var(--grey);
         background-image: url('assets/images/product-bg.png');
         background-repeat: no-repeat;
         background-position: center;
@@ -282,6 +322,7 @@ nav ul {
 .button-container {
         display: flex;
         justify-content: space-between;
+        cursor: pointer;
 }
 
 .products-content .button-container .get-quote,
@@ -325,12 +366,13 @@ nav ul {
         align-items: center;
         justify-content: center;
 
-        background: #FFFFFF;
+        background: white;
         backdrop-filter: blur(2px);
         /* Note: backdrop-filter has minimal browser support */
 
         border-radius: 3.125rem;
         font-size: 3rem;
+        z-index: 100;
 
         cursor: pointer;
 }
@@ -357,6 +399,7 @@ nav ul {
         /* Note: backdrop-filter has minimal browser support */
 
         border-radius: 1.25rem;
+        z-index: 50;
         overflow-x: hidden;
         object-fit: cover;
 }
@@ -367,10 +410,11 @@ nav ul {
         right: -10rem;
         overflow: hidden;
 
-        background: #FFFFFF;
+        background: white;
         box-shadow: 0 0.75rem 0.25rem rgba(0, 0, 0, 0.25);
         filter: blur(2px);
         border-radius: 1.25rem;
+        z-index: 10;
 }
 
 .next-card img {
@@ -392,7 +436,7 @@ nav ul {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        
+
         padding-bottom: 2rem;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -405,7 +449,7 @@ nav ul {
         color: white;
         border-radius: 0px 0px 50px 0px;
         overflow: hidden;
-        
+
         background-image: url('assets/images/title-bg.png');
         background-repeat: no-repeat;
         background-position: center;
@@ -440,31 +484,186 @@ nav ul {
         font-weight: 600;
         font-size: 2rem;
 
-        color: #49514D;
+        color: var(--light-grey);
 }
 
-.testimonials .feedback, .testimonials .person-name, .testimonials .person-designation{
+.testimonials .feedback,
+.testimonials .person-name,
+.testimonials .person-designation {
         font-size: 1.3rem;
 }
-.testimonials .image-container{
+
+.testimonials .image-container {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
         justify-content: center;
         gap: 2rem;
 }
-.testimonials .image-container img{
+
+.testimonials .image-container img {
         border-radius: 50%;
         width: 3.25rem;
         aspect-ratio: 1;
 }
-.testimonials .image-container img:nth-child(2){        
+
+.testimonials .image-container img:nth-child(2) {
         width: 6.5rem;
 }
 
-.testimonials .person-designation{
+.testimonials .person-designation {
         color: var(--dark-yellow);
 }
-.testimonials .person-name{
+
+.testimonials .person-name {
         color: var(--light-grey);
+}
+
+/* ----------------------------- cements ----------------------------- */
+.cements {
+        flex-direction: column;
+        margin-bottom: 5rem;
+        gap: 1.5rem;
+}
+
+.cements .heading-2::after {
+        width: 6%;
+}
+
+.cards-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 2rem;
+        gap: 2rem;
+}
+
+.cements .card {
+        width: 22rem;
+        align-items: flex-start;
+        justify-content: flex-end;
+        border-radius: 1rem;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+        background-image: url("assets/images/applying-cement.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+}
+
+.card-content {
+        margin-top: 60%;
+        padding: 3.25rem 2rem;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        position: relative;
+}
+
+.cements .small-heap-img {
+        width: 6rem;
+        aspect-ratio: 1;
+        position: absolute;
+        top: -3rem;
+        /* 
+        background-image: url("assets/images/OPC-cement.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; */
+}
+
+.cement-name {
+        font-weight: 600;
+        text-transform: capitalize;
+        color: var(--yellow);
+}
+
+.cements .button-container {
+        padding: 0.5rem;
+        border: 1px solid var(--yellow);
+        border-radius: 10px;
+}
+
+.cements .learn-more {
+        font-weight: 200;
+        font-size: 1.2rem;
+        color: var(--yellow);
+        cursor: pointer;
+}
+
+/* ----------------------------- brands ----------------------------- */
+.brands {
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+}
+
+/* ----------------------------- contact us ----------------------------- */
+.contact{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+
+        position: relative;
+}
+.contact .heading{
+        margin-bottom: 4rem;
+}
+.contact .heading-2::after {
+        width: 30%;
+        left: 30%;
+}
+.contact-bg{
+        width: 100%;
+        margin-top: 10rem;
+}
+.card-container{
+        min-width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1rem;
+
+        position: absolute;
+        top: 9.4rem;
+        color: var(--light-grey);
+}
+.contact .card{
+        height: 18.75rem;
+        min-width: 16rem;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+}
+.card-logo{
+        color: var(--light-grey);
+        font-size: 2.75rem;
+}
+.contact .card-title{
+        font-weight: 600;
+        text-transform: capitalize;
+}
+.contact .card-subtitle{
+        font-size: 1.25rem;
+        text-align: center;
+}
+.contact .mail .card-subtitle{
+        font-size: 1rem;
+}
+
+/* ----------------------------- footer ----------------------------- */
+footer{
+        width: 100%;
+        height: 20rem;
+        background-color: var(--yellow);
 }

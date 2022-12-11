@@ -12,15 +12,15 @@
 
 <body>
         <header class="container">
-                <nav>
+                <nav id="nav">
                         <div class="logo">
                                 <img src="assets/images/letter-v-logo-icon-vector-23845796 1.png" alt="logo">
                         </div>
                         <ul>
                                 <li><a class="nav-btn" href="#">Home</a></li>
-                                <li><a class="nav-btn" href="#">Products</a></li>
-                                <li><a class="nav-btn" href="#">About</a></li>
-                                <li><a class="nav-btn" href="#">Contact Us</a></li>
+                                <li><a class="nav-btn" href="#About">About</a></li>
+                                <li><a class="nav-btn" href="#Products">Products</a></li>
+                                <li><a class="nav-btn" href="#Contact">Contact Us</a></li>
                         </ul>
                 </nav>
                 <div class="hero">
@@ -36,7 +36,7 @@
                         </div>
                 </div>
         </header>
-        <section class="about container">
+        <section class="about container" id="About">
                 <div class="about-img">
                         <img src="assets/images/cement-bags-paper-sacks.png" alt="cement-bags-paper-sacks">
                 </div>
@@ -53,7 +53,7 @@
                         </div>
                 </div>
         </section>
-        <section class="products">
+        <section class="products" id="Products">
                 <h2 class="heading-2">Products We Sell</h2>
                 <div class="products-content">
                         <div class="content-container">
@@ -93,7 +93,8 @@
                         </div>
                         <div class="contents">
                                 <h4 class="sub-heading">Help us improve our productivity</h4>
-                                <p class="sub-heading feedback">As  a building contractor, I recommend veenus to all my clients as they provide best quality cement fitted for the purpose</p>
+                                <p class="sub-heading feedback">As a building contractor, I recommend veenus to all my
+                                        clients as they provide best quality cement fitted for the purpose</p>
                                 <div class="image-container">
                                         <img src="assets/images/profile-img.jpg" alt="anu">
                                         <img src="assets/images/profile-img.jpg" alt="anu">
@@ -105,8 +106,97 @@
                                 </div>
                         </div>
                 </div>
-                
+
         </section>
+        <section class="cements container">
+                <h2 class="heading-2">Cements</h2>
+                <div class="cards-container">
+                        <div class="card">
+                                <div class="card-content">
+                                        <h4 class="sub-heading cement-name">PPC (portland pozzolana cement)</h4>
+                                        <img class="small-heap-img" src="assets/images/OPC-cement.png" alt="opc heap">
+                                        <div class="content-container">
+                                                <p class="content sub-heading">PPC can be confidently employed in
+                                                        construction of hydraulic structures, marine works, mass
+                                                        concreting such as dams, dykes, retaining walls foundations and
+                                                        sewage pipes. It is also.</p>
+                                        </div>
+                                        <div class="button-container">
+                                                <button class="sub-heading learn-more">Learn more</button>
+                                        </div>
+                                </div>
+
+                        </div>
+                        <div class="card">
+                                <div class="card-content">
+                                        <h4 class="sub-heading cement-name">OPC (Ordinary Portland Cement)</h4>
+                                        <img class="small-heap-img" src="assets/images/PPC-cement.png" alt="opc heap">
+                                        <div class="content-container">
+                                                <p class="content sub-heading">OPC is a general purpose Portland cement
+                                                        suitable for all uses where the special properties of other
+                                                        types are not required. It is used where cement or concrete is
+                                                        not subject to specific exposures.</p>
+                                        </div>
+                                        <div class="button-container">
+                                                <button class="sub-heading learn-more">Learn more</button>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="card">
+                                <div class="card-content">
+                                        <h4 class="sub-heading cement-name">RHC (Rapid Hardening Cement)</h4>
+                                        <img class="small-heap-img" src="assets/images/RHC-cement.png" alt="opc heap">
+                                        <div class="content-container">
+                                                <p class="content sub-heading">RHC are also called high early strength
+                                                        cement. The prime difference between the rapid hardening cement
+                                                        and ordinary Portland cement is the lime content. Large
+                                                        proportion of lime is the distinguishing feature of rapid
+                                                        hardening cement.</p>
+                                        </div>
+                                        <div class="button-container">
+                                                <button class="sub-heading learn-more">Learn more</button>
+                                        </div>
+                                </div>
+
+                        </div>
+                </div>
+        </section>
+        <section class="contact container" id="Contact">
+                <h2 class="heading-2">Contact</h2>
+                <img src="/assets/images/Contact-bg.png" alt="bg-img" class="contact-bg">
+                <div class="card-container">
+                        <div class="card visit-hours">
+                                <iconify-icon icon="entypo:back-in-time" class="card-logo"></iconify-icon>
+                                <div class="sub-heading card-title">We are available</div>
+                                <div class="sub-heading card-subtitle">Mon - Sun,<br>10AM - 7PM</div>
+                        </div>
+                        <div class="card mob">
+                                <iconify-icon icon="material-symbols:phone-android-rounded" class="card-logo"></iconify-icon>
+                                <div class="sub-heading card-title">Let’s Talk</div>
+                                <div class="sub-heading card-subtitle">+91 - 9207 639 389<br>+91 - 7594 958 810</div>
+                        </div>
+                        <div class="card mail">
+                                <iconify-icon icon="material-symbols:mail-rounded" class="card-logo"></iconify-icon>
+                                <div class="sub-heading card-title">send a mail</div>
+                                <div class="sub-heading card-subtitle">office@veenusenterprises.in<br>contact@veenusenterprises.in</div>
+                        </div>
+                        <div class="card location">
+                                <iconify-icon icon="material-symbols:location-on-outline" class="card-logo"></iconify-icon>
+                                <div class="sub-heading card-title">visit us</div>
+                                <div class="sub-heading card-subtitle">Veenus Enterprises<br>20/1292, Mangad,<br>Kollam, Kerala 691015</div>
+                        </div>
+                </div>
+        </section>
+        <section class="brands container">
+                <img src="assets/logos/brands/zuari-cement-logo.png" alt="zuari-cements">
+                <img src="/assets/logos/brands/birla-shakti-cement-logo.png" alt="birla-shakti">
+                <img src="/assets/logos/brands/kcp-cement-logo.png" alt="kcp-cements">
+                <img src="/assets/logos/brands/chettinad-logo.png" alt="chettinad">
+                <img src="/assets/logos/brands/ultratech-cement-logo.png" alt="ULTRATECH">
+        </section>
+        <footer>
+        </footer>
+        <script src="index.js"></script>
 </body>
 
 </html>
