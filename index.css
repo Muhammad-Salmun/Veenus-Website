@@ -22,7 +22,9 @@ html {
         --dark-yellow: rgb(238, 156, 3);
         --light-yellow: rgba(254, 206, 115, 1);
         --grey: rgba(56, 56, 54, 1);
+        --dark-grey: #1B1B1B;
         --light-grey: rgba(73, 81, 77, 1);
+        --light-white: #E8E8E8;
 
         --margin: 10vw;
 }
@@ -669,6 +671,53 @@ nav ul li:hover .nav-btn::after {
 /* ----------------------------- footer ----------------------------- */
 footer{
         width: 100%;
-        height: 20rem;
-        background-color: var(--yellow);
+        background-color: var(--dark-grey);
+        padding-top: 3rem;
+        color: var(--light-white);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 }
+
+footer .container{
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+}
+
+footer .logo, footer .useful-links, footer .social{
+        flex: 0;
+}
+
+footer .container .logo, footer .useful-links ul, footer .social ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+}
+
+footer .useful-links a, footer .social a{
+        font-family: 'outfit';
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--light-white);
+
+}
+ footer .social li{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+ }
+
+ footer .copyright{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        margin-bottom: 1rem;
+ }
