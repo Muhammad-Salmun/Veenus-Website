@@ -1,0 +1,38 @@
+[
+        {
+                "name": "ULTRATECH CEMENTS",
+                "type": " OPC 53 Grade",
+                "description": "Ordinary Portland cement is the most commonly used cement for a wide range of applications. These applications cover ordinary, standard, high strength concrete, masonry and plastering works, precast concrete products for e.g., blocks, pipes etc., and specialized works such as precast and prestressed concrete.",
+                "image": "assets/images/products/53-grade-ultratech-bag.png"
+        },
+        {
+                "name": "BIRLA SHAKTI CEMENT",
+                "type": "KESORAM PPC",
+                "description": "Blended with high grade Pozzolana. Most recommended for all modern constructions. High long term strength & durability. Low heat of hydration. Smooth finish, resists seepage & cracks.",
+                "image": "assets/images/products/birla-shakti-cement-opc-53.png"
+        },
+        {
+                "name": " ZUARI CEMENTS",
+                "type": "PPC Cement",
+                "description": "Zuari cement is a type of Portland pozzolana cement (PPC) made by combining Portland cement with pozzolana. It has a variety of benefits, including low heat of hydration, increased bulk volume, and increased resistance to certain aggressive substances. It can be used in many construction applications, including heavy-duty structures and mortars for construction, as well as for producing fibre cement roofing sheets.",
+                "image": "assets/images/products/zuari-cement-ppc.png"
+        },
+        {
+                "name": "KCP Cement",
+                "type": "PPC 53 Grade",
+                "description": "KCP Port Pozzolana Cement is produced by one of the oldest cement producers in India. KCP PPC provides a denser mix of concrete for stronger and durable structures. The Portland Pozzolana Cement is a kind of Blended Cement which is produced by either intergrinding of OPC clinker along with gypsum and pozzolanic materials in certain proportions or grinding the OPC clinker, gypsum and Pozzolanic materials separately and thoroughly blending them in certain proportions.",
+                "image": "assets/images/products/KCP-cement.png"
+        },
+        {
+                "name": "CHETTINAD CEMENTS",
+                "type": "OPC 53 Grade",
+                "description": "Chettinad cement is a high-quality building material engineered for use in various construction projects, including structural, building, and marine and hydraulic construction. It is made with a blend of good quality raw materials and produced using strict quality control processes to ensure consistent and reliable performance. It is suitable for use in a range of construction projects, including residential, commercial, industrial, and public infrastructure, and is the result of careful research and development by our team of cement engineers and scientists.",
+                "image": "assets/images/products/chettinad-cement.png"
+        },
+        {
+                "name": "ANJANI CEMENT",
+                "type": "OPC 53 Grade",
+                "description": "Anjani Cements is a high-quality cement with superior strength and performance. It has low chloride content and is adjusted for optimal particle size, enabling improved control of hardening and strength gain. It is economical to use and provides a superior finish, with early transfer of stresses in precast and prestressed construction.",
+                "image": "assets/images/products/anjani-super-gold-cement.png"
+        }
+]
