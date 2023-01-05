@@ -22,6 +22,8 @@ fetch('products_data.json')
 
                 // Add click event listeners to the "prev" and "next" icons
                 document.querySelector('#prev-product').addEventListener('click', () => {
+                        products_curr_card.classList.add('fade-in');                        
+                        products_prev_card.classList.add('fade-in');
                         currentIndex = prevIndex;
                         prevIndex--;
                         if (prevIndex < 0) {
@@ -31,15 +33,26 @@ fetch('products_data.json')
                         products_prev_card.querySelector('img').src = data[prevIndex].image;
                 });
                 document.querySelector('#next-product').addEventListener('click', () => {
+                        products_curr_card.classList.add('fade-in');                        
+                        products_prev_card.classList.add('fade-in');
                         prevIndex = currentIndex;
                         currentIndex++;
                         if (currentIndex >= data.length) {
                                 currentIndex = 0;
                         }
                         updateProductData(data[currentIndex]);
-                        products_prev_card.querySelector('img').src = data[prevIndex].image;
+                        products_prev_card.querySelector('img').src = data[prevIndex].image;                        
                 });
-
+                products_curr_card.addEventListener('animationend', function () {
+                        products_curr_card.classList.remove('fade-in');
+                        products_curr_card.classList.add('fade-out');
+                });
+                products_curr_card.addEventListener('animationend', function () {
+                        products_curr_card.classList.remove('fade-out');
+                });
+                products_prev_card.addEventListener('animationend',function(){
+                        products_prev_card.classList.remove('fade-in');
+                });
         })
 
 // nav bar styling on scrolling down
